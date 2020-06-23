@@ -3,7 +3,6 @@ function Battery() {
   navigator.getBattery().then(function (battery) {
     //level status
     let proc = Math.floor(battery.level * 100);
-    console.log(proc);
 
     let level = document.querySelector(".level");
     level.innerHTML = proc + " %";
@@ -28,7 +27,8 @@ function Battery() {
     //add fully charged description and change color to green when battery value is 100%
     if (proc == "100") {
       status.innerHTML = "FULLY CHARGED";
-      rect.setAttribute.fill = "green";
+      rect.classList.remove("rect");
+      rect.setAttribute("fill", "green");
     }
   });
 }
