@@ -8,11 +8,14 @@ function Battery() {
     let status = document.querySelector(".status");
     status.innerHTML = charging;
 
-    const svg = document.querySelector("svg rect");
+    const rect = document.getElementById("Rectangle-path");
 
-    if (charging == true) svg.setAttribute("fill", "green");
-    else svg.setAttribute("fill", "#FF6E6E");
+    if (charging == true) rect.classList.add("rect");
+    else rect.classList.remove("rect");
   });
 }
 
 setInterval(Battery, 1000);
+
+// if (charging == true) svg.setAttribute("fill", "green");
+// else svg.setAttribute("fill", "#FF6E6E");

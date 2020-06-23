@@ -34,3 +34,18 @@ span {
   color: white;
   text-align: center;
 }
+.rect {
+  animation: animation 2s ease infinite;
+}
+
+@keyframes animation {
+  0% {
+    fill: #ff6e6e;
+  }
+  50% {
+    fill: green;
+  }
+  100% {
+    fill: #ff6e6e;
+  }
+}
