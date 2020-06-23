@@ -7,6 +7,11 @@ function Battery() {
     let charging = battery.charging;
     let status = document.querySelector(".status");
     status.innerHTML = charging;
+
+    const svg = document.querySelector("svg rect");
+
+    if (charging == true) svg.setAttribute("fill", "green");
+    else svg.setAttribute("fill", "#FF6E6E");
   });
 }
 
