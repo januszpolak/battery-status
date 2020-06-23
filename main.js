@@ -15,9 +15,20 @@ function Battery() {
     // get part of svg element
     const rect = document.getElementById("Rectangle-path");
 
-    //add change color animation when battery is charged
-    if (charging == true) rect.classList.add("rect");
-    else rect.classList.remove("rect");
+    //add change color animation and description when battery is charged
+    if (charging == true) {
+      rect.classList.add("rect");
+      status.innerHTML = "CHARGING";
+    } else {
+      rect.classList.remove("rect");
+      status.innerHTML = "DISCHARGING";
+    }
+
+    //add fully charged description and change color to green when battery value is 100%
+    if (proc === "100") {
+      status.innerHTML = "FULLY CHARGED";
+      rect.setAttribute.fill = "green";
+    }
   });
 }
 
