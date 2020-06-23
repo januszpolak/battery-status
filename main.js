@@ -16,10 +16,10 @@ function Battery() {
     const rect = document.getElementById("Rectangle-path");
 
     //add change color animation and description when battery is charged
-    if (charging == true) {
+    if (charging == true && proc !== 100) {
       rect.classList.add("rect");
       status.innerHTML = "CHARGING";
-    } else {
+    } else if (charging == false && proc !== 100) {
       rect.classList.remove("rect");
       status.innerHTML = "DISCHARGING";
     }
