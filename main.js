@@ -2,7 +2,7 @@ function Battery() {
   // get battery status
   navigator.getBattery().then(function (battery) {
     //level status
-    let proc = Math.round(battery.level * 100);
+    let proc = Math.floor(battery.level * 100);
 
     let level = document.querySelector(".level");
     level.innerHTML = proc + " %";
